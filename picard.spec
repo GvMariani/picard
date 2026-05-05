@@ -25,6 +25,7 @@ BuildRequires:		gettext
 BuildRequires:		mutagen
 BuildRequires:		pkgconfig(libdiscid)
 BuildRequires:		pkgconfig(python)
+BuildRequires:		python-pip
 BuildRequires:		python-setuptools
 BuildRequires:		python-pyproject-api
 Requires:	%{mklibname discid 0}
