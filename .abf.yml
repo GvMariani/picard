@@ -1,5 +1,3 @@
 sources:
   lastfm.zip: 72f0b491e0c41e13bebcbacc3cd9d4816580e8ca
-  picard-2.13.2.tar.gz: eeae71573aaa5dfbafb1707e3b39bd739660ff21
-  picard-3.0.0.~0.20250214.1.tar.gz: 5ea4f94a133b93bdab5fb14b78c44b66660ba72b
-  picard-3.0.0.~0.20250807.1.tar.xz: f45b6b03cdce7f72b712054d78b55021ac06abd6
+  picard-release-3.0.0b1.tar.gz: 59e4e9622de747766115053c3cd78a8aedb4ed12

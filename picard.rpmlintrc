@@ -1,2 +1,5 @@
 # This is needed
 addFilter("E: explicit-lib-dependency")
+
+# Boatloads of useless errors
+addFilter("E: incorrect-fsf-address")
