@@ -3,3 +3,6 @@ addFilter("E: explicit-lib-dependency")
 
 # Boatloads of useless errors
 addFilter("E: incorrect-fsf-address")
+
+# Picard has the lang files in %%{python_sitearch}/%%{name}
+addFilter("W: file-not-in-%lang")

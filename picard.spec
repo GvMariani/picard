@@ -1,7 +1,7 @@
 # Set to nil when packaging a release, 
 # or the long commit tag for the specific git branch
 %define		commit_tag d9995453d778e53ede135180ab5bb90fe91508b0
-%define		gitdate	20260423
+%define		gitdate	20260630
 
 Summary:	      The official MusicBrainz tagger
 Name:	picard
@@ -15,7 +15,7 @@ Url:		https://picard.musicbrainz.org/
 #Source0:	      https://data.musicbrainz.org/pub/musicbrainz/%%name/%%name-%%version.tar.gz
 # Change the source URL depending on if the package is a release version or a git version
 %if "%{commit_tag}" != "%{nil}"
-Source0:	https://github.com/metabrainz/picard/archive/%{commit_tag}.tar.gz#/%{name}-release-%{version}b1.tar.gz
+Source0:	https://github.com/metabrainz/picard/archive/%{commit_tag}.tar.gz#/%{name}-release-%{version}b5.tar.gz
 %else
 Source0:	https://github.com/metabrainz/picard/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 %endif
@@ -33,12 +33,12 @@ Requires:	%{_lib}xcb-cursor0
 Requires:	mutagen
 Requires:	python
 Requires:	python-charset-normalizer
-Requires:	python-dateutil
-Requires:	python-libdiscid
-Requires:	python-libgit2-glib
+#Requires:	python-dateutil
+#Requires:	python-libdiscid
+#Requires:	python-libgit2-glib
 Requires:	python-markdown
 Requires:	python-pyjwt 
-Requires:	python-qt6
+#Requires:	python-qt6
 Requires:	python-pyyaml
 #gw for fpcalc (AcoustID calculation)
 Recommends:	chromaprint
@@ -71,13 +71,13 @@ Next Generation.
 %{_datadir}/applications/org.musicbrainz.Picard.desktop
 %{_datadir}/metainfo/org.musicbrainz.Picard.appdata.xml
 %{python_sitearch}/%{name}
-%{python_sitearch}/%{name}-%{version}b1.dist-info
+%{python_sitearch}/%{name}-%{version}b5.dist-info
 %{_iconsdir}/hicolor/*/apps/*
 
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{name}-release-%{version}b1
+%autosetup -p1 -n %{name}-release-%{version}b5
 
 
 %build
